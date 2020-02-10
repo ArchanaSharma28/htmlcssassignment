@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Question 1.1</title>
+<script>
+
+function change_text(){
+
+var x= document.getElementById("demo");
+
+
+if(x.innerHTML==="Monday"){
+x.innerHTML="Tuesday";
+}
+
+else if(x.innerHTML==="Tuesday"){
+x.innerHTML="Wednesday";
+}
+
+else if(x.innerHTML==="Wednesday"){
+x.innerHTML="Thursday";
+}
+
+else if(x.innerHTML==="Thursday"){
+x.innerHTML="Friday";
+}
+
+else if(x.innerHTML==="Friday"){
+x.innerHTML="Saturday";
+}
+
+else if(x.innerHTML==="Saturday"){
+x.innerHTML="Sunday";
+}
+
+else if(x.innerHTML==="Sunday"){
+x.innerHTML="Monday";
+}
+}
+</script>
+</head>
+<body>
+<input type="button" id="click" value="CLICK ME!" onclick="return change_text()">
+<br>
+<br>
+<textarea id="demo" cols="20" rows="2" >Monday</textarea>
+</body>
+</html>

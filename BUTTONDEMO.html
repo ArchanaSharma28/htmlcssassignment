@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Question 1</title>
+<script>
+
+function change_text(){
+
+var x= document.getElementById("demo");
+if(x.innerHTML==="Hello!"){
+x.innerHTML="Well done!";
+}
+else{
+x.innerHTML="Hello!";
+}
+
+}
+</script>
+</head>
+<body>
+<input type="button" id="click" value="CLICK ME!" onclick="return change_text()">
+<p id="demo"> </p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Question 2</title>
+</head>
+<body>
+<ul id="list">
+</ul>
+<p> Click the button to append an item to the end of the list.</p>
+<input type="text" id="text">
+
+<button onclick="add()">ADD</button>
+<button onclick="remove()">DELETE</button>
+
+<script>
+function add(){
+var node=document.getElementById("list");
+var node2=document.getElementById("text");
+var li=document.createElement("li");
+li.setAttribute('id',node2.value);
+li.appendChild(document.createTextNode(node2.value));
+node.appendChild(li);
+
+document.getElementById('text').value='';
+}
+
+function remove(){
+
+var node=document.getElementById("list");
+var node2=document.getElementById("text");
+var item=document.getElementById(node2.value);
+node.removeChild(item);
+document.getElementById('text').value='';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> Welcome to Cognizant</title>
+<script>
+function validate()
+{
+var x=document.MyForm.Name.value;
+var y=document.MyForm.pwd.value;
+var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+if(x=="" || x==null)
+{
+alert("Field cannot be empty");
+return false;
+}
+else if(is NaN(x))
+{
+alert("Name cannot have numbers");
+return false;
+}
+else if(x.length<2 || x.length>30)
+{
+alert("Name length should be between 2 to 30");
+return false;
+}
+else if(pattern.test(x)){
+alert("Name cannot have special character");
+return false;
+}
+else{
+return true;
+}
+}
+if(y==null||y=="")
+{
+alert("Password cannot be empty");
+return false;
+}
+
+
+
+</script>
+</head>
+<body>
+
+<h1> Personal Details </h1>
+<hr>
+<br>
+<form name="MyForm" onsubmit="return validate()" method="post" action="welcome.html" >
+<table cellpadding=2px >
+<tr>
+<td><label for="Name">Name:</label></td>
+<td><input type="text" name="Name" placeholder="Enter your name"></td>
+</tr>
+<tr></tr>
+
+<tr>
+<td>Gender:</td>
+<td><label for="g1">Male<input type="radio" name="gender" id="g1" ></label>
+ <label for="g2">Female <input type="radio" name="gender" id="g2"></label></td>
+</tr>
+<tr></tr>
+
+<tr>
+<td><label for="hometown">Home Town:</label></td>
+<td><select name="hometown" id="hometown">
+<option value="none" selected disabled hidden>Select</option>
+<option value="Delhi">New Delhi</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+</select></td></tr>
+<tr></tr>
+
+<tr>
+<td><label for="Address">Address:</label></td>
+<td ><textarea rows="5" cols="50"placeholder="Enter full address" id="Address"></textarea></td>
+</tr>
+<tr></tr>
+
+<tr>
+<td>Skills:</td>
+<td><label for="s1">Java</label> <input type="radio" name="skills" value="java" checked id="s1">
+<label for="s2"> HTML</label><input type="radio" name="skills" value="html" id="s2"> 
+<label for="s3">Oracle</label><input type="radio" name="skills" value="oracle" id="s3"></td>
+</tr>
+<tr></tr>
+
+<tr>
+<td><label for="pwd">Password:</label></td>
+<td><input type="password" name="pwd" id="pwd"></td>
+</tr>
+<tr></tr>
+
+<tr><td></td>
+<td><input type="Submit" value="Submit">Submit</td></tr>
+</table>
+</form>
+
+</body>
+</html>

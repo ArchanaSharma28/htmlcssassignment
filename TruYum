@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>
+#main{
+		border-style:solid;
+		border: 1px black;
+		width:100%
+		height:100%
+		margin:-1px;
+		
+}
+</style>
+</head>
+<body>
+<div id="main">
+<header id="header">
+<div id="name"><h1>truYum</h1></div>
+<div id="icon"><img src="C:\ARCHANA\HTML&CSS\fork.png" alt="truYum" ></div>
+<div id="menu"><a href="#">Menu</a></div>
+</header>
+
+
+</div>
+
+</body>
+</html>

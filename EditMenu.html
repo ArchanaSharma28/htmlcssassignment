@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="C:\ARCHANA\HTML&CSS\EditMenu.css">
+ 
+</head>
+<body>
+<div id="main">
+<header id="header">
+<div id="name">truYum<img src="C:\Users\adm\AppData\Roaming\Microsoft\Windows\Network Shortcuts\forkspoon2.png" alt="truYum" height="40" width="50" align="center" >
+<div  id="menu1"><a href="#">Menu</a></div></div>
+</header>
+<br>
+
+<div id="body">
+<h1><pre> Edit Menu Item </pre></h1>
+<br>
+<br>
+<form name="EditMenu" method="post" onsubmit="return validateform()">
+<table cellspacing="10px">
+<tr>
+<td><label for="menuname">Name</label><br>
+<input type="text" id="menuname" placeholder="eg. Sandwich"></td>
+</tr>
+<tr></tr><tr></tr>
+<tr>
+<td> <label for="price">Price(Rs.)<label><br>
+<input type="number" id="price" placeholder="eg.97"></td>
+<td></td>
+<td><label for="yes">Active</label><br>
+<input type="radio" name="act" id="yes"><label for="yes">Yes</label>
+<input type="radio" name="act" id="no"><label for="no">No</label></td>
+<td></td>
+<td><label for="DOL">Date of Launch</label></br>
+<input type="date" id="DOL" placeholder="eg.27/04/2022"></td>
+<td></td>
+<td>
+<label for="category">Category</label><br>
+<select id="category">
+<option value="Starters">Starters</option>
+<option value="Main Course">Main Course</option>
+<option value="Dessert">Dessert</option>
+<option value="Drinks">Drinks</option>
+</select>
+</td>
+</tr>
+<tr></tr><tr></tr>
+
+<tr>
+<td><input type="checkbox" id="delivery" name="delivery"> <label for="delivery">Free Delivery</label></td>
+</tr>
+<tr></tr><tr></tr>
+
+<tr>
+<td><input type="submit" name="save" id="save" value="SAVE"></td>
+</tr>
+
+</table>
+</form>
+</center>
+</div>
+</div>
+
+<footer id="footer">
+<div id="copy">Copyright &copy 2019</div>
+</footer>
+</div>
+</body>
+</html>

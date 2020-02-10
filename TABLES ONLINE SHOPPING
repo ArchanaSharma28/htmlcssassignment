@@ -1,0 +1,53 @@
+				CREATE TABLE Customer (
+				CustomerID int NOT NULL UNIQUE,
+				FirstName varchar(225) NOT NULL,
+				LastName varchar(225),
+				Email varchar(50) NOT NULL,
+				Phone varchar(225)NOT NULL,
+				DOB date,
+				Address varchar(225) NOT NULL,
+				Age int,
+				Check(Age>=16)
+				);
+				
+				
+				CREATE TABLE Product (
+				ProductID int NOT NULL UNIQUE,
+				ProductName varchar(225) NOT NULL,
+				ProductType varchar(225),
+				Price int NOT NULL,
+				Quantity int NOT NULL
+				);
+				
+				CREATE TABLE Orders(
+				OrderID int NOT NULL PRIMARY KEY,
+				CustomerID int NOT NULL,
+				OrderDate date,
+				OrderStatus varchar(225),
+				TotalPrice int,
+				FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+				);
+				
+				CREATE TABLE Cart(
+				CartID int NOT NULL PRIMARY KEY,
+				ProductID int NOT NULL,
+				Quantity int,
+				FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+				);
+				
+				CREATE TABLE PurchasedItem(
+				PurchaseID int NOT NULL PRIMARY KEY,
+				OrderID int NOT NULL,
+				ProductID int NOT NULL,
+				TotalPrice int,
+				Quantity int,
+				FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
+				FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+				);
+				
+				CREATE TABLE Review(
+				CustomerID int NOT NULL,
+				ReviewID int NOT NULL PRIMARY KEY,
+				Review varchar(225),
+				FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+				);

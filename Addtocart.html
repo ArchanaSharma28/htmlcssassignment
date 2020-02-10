@@ -1,0 +1,90 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="C:\ARCHANA\HTML&CSS\Addtocart.css">
+<script>
+function addtocart(){
+document.getElementById("Cart").innerHTML = "Sandwich Added To Cart";
+}
+
+function addtocart1(){
+document.getElementById("Cart").innerHTML = "Burger Added To Cart";
+}
+
+function addtocart2(){
+document.getElementById("Cart").innerHTML = "Pizza Added To Cart";
+}
+
+</script>
+</head>
+<body>
+<div id="main">
+<header id="header">
+<div id="name">truYum<img src="C:\Users\adm\AppData\Roaming\Microsoft\Windows\Network Shortcuts\forkspoon2.png" alt="truYum" height="40" width="50" align="center" >
+<div  id="menu1"><a href="Menu list admin.html">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#">Cart</a></div></div>
+</header>
+<br>
+<br>
+
+<div id="body">
+<h1 align="center">Menu Items</h1>
+<br><br>
+<h3 align="Center" id="Cart"></h3>
+<br>
+<center>
+<table cellspacing=20px>
+
+<tr>
+<th align="left"> Name </th>
+<th> </th>
+<th> </th>
+<th align="center">Free Delivery</th>
+<th align="right"> Price </th>
+<th align="center"> Category</th>
+<th align="center">Action</th>
+</tr>
+
+<tr>
+<td align="left"> Sandwich</td>
+<td> </td>
+<td> </td>
+<td align="center">Yes</td>
+<td align="right"> Rs.99.00 </td>
+<td align="center"> Main Course</td>
+<td align="center"><a href="#" onclick="addtocart()"> Add to cart</a></td>
+
+</tr>
+
+<tr>
+<td align="left"> Burger</td>
+<td> </td>
+<td> </td>
+<td align="center">No</td>
+<td align="right"> Rs.129.00 </td>
+<td align="center"> Main Course</td>
+<td align="center"><a href="#" onclick="addtocart1()">Add to cart</a></td>
+</tr>
+
+<tr>
+<td align="left"> Pizza</td>
+<td> </td>
+<td> </td>
+<td align="center">No</td>
+<td align="right"> Rs.149.00 </td>
+<td align="center"> Main Course</td>
+<td align="center"><a href="#" onclick="addtocart2()">Add to cart</a></td>
+</tr>
+
+</table>
+</center>
+</div>
+
+
+<footer id="footer">
+<div id="copy">Copyright &copy 2019</div>
+</footer>
+</div>
+</div>
+
+</body>
+</html>
